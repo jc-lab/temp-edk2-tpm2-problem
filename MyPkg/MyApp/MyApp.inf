@@ -1,0 +1,60 @@
+## @file
+#  Brief Description of UEFI MyHelloWorld
+#
+#  Detailed Description of UEFI MyWizardDriver
+#
+#  Copyright for UEFI  MyHelloWorld
+#
+#  License for UEFI  MyHelloWorld
+#
+##
+
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = MyApp
+  FILE_GUID                      = 4a769a96-38ba-4f28-aaa2-469c93c13cf9
+  #Copy and paste the GUID from http://www.guidgen.com/ here
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = IA32 X64 IPF EBC Etc...
+#
+
+[Sources]
+  AppMain.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  SecurityPkg/SecurityPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  PcdLib
+  OpensslLib
+  Tpm2DeviceLib
+  Tpm2DeviceLibTcg2
+  Tcg2PhysicalPresenceLib
+  Tcg2PpVendorLib
+
+[Guids]
+
+
+[Ppis]
+
+[Protocols]
+#  gEfiTcg2ProtocolGuid
+#  gEfiTcg2PhysicalPresenceGuid
+
+[FeaturePcd]
+
+[Pcd]
+
+[Depex]
+  TRUE
+  # gEfiTcg2ProtocolGuid AND
+  # gEfiTcg2PhysicalPresenceGuid

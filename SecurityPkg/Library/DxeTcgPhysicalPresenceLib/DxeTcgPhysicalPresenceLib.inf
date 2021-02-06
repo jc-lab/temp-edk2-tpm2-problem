@@ -43,7 +43,7 @@
   MemoryAllocationLib
   UefiLib
   UefiBootServicesTableLib
-  UefiDriverEntryPoint
+  # UefiDriverEntryPoint
   UefiRuntimeServicesTableLib
   BaseMemoryLib
   DebugLib
